@@ -17,7 +17,7 @@ def domainr_query(query):
 
 @app.route('/', methods=['GET','POST'])
 def hello():
-    query = request.args.get('phrase', None)
+    query = request.args.get('text', None)
     results = domainr_query(query)
     available_domains = []
     for result in results['results']:
