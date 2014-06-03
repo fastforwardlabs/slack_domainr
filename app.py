@@ -7,11 +7,10 @@ from flask import *
 app = Flask(__name__)
 
 def domainr_query(query):
-    print "Running query: %s" % query
+    #print "Running query: %s" % query
     BASE_URL = "https://domai.nr/api/json/search?q="
     h = urllib.urlopen(BASE_URL + query)
     results = json.loads(h.read())
-    #print results
     return results
 
 
